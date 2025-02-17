@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Plaza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Welcome to Movie Plaza!</h1>
+        <p>Your one-stop destination for movie details.</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search Section -->
+        <section class="search-section">
+            <h2>Search for a Movie</h2>
+            <form id="movieForm">
+                <input type="text" id="movieTitleInput" placeholder="Enter movie title..." required aria-label="Movie Title">
+                <button type="submit" aria-label="Search Movie">Search</button>
+                <button type="reset" aria-label="Clear Search">Clear</button>
+            </form>
+            <div id="error" class="error-message" role="alert"></div>
+            <div id="loading" class="loading-spinner" style="display: none;">Loading...</div>
+        </section>
+
+        <!-- Movie Details Section -->
+        <section id="movieDetails" class="movie-details" style="display: none;">
+            <h2 id="movieTitle" class="movie-title"></h2>
+            <img id="movieImage" alt="Movie Poster" class="movie-poster">
+            <p><strong>Plot:</strong> <span id="moviePlot"></span></p>
+            <p><strong>Actors:</strong> <span id="movieActors"></span></p>
+            <p><strong>Director:</strong> <span id="movieDirector"></span></p>
+            <p><strong>Genre:</strong> <span id="movieGenre"></span></p>
+            <p><strong>Released:</strong> <span id="movieReleased"></span></p>
+            <p><strong>Runtime:</strong> <span id="movieRuntime"></span></p>
+            <p><strong>IMDb Rating:</strong> <span id="movieRating"></span></p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Movie Plaza. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
