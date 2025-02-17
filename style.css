@@ -30,7 +30,8 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
+    /* Increased width to accommodate image + details */
     margin: 20px auto;
     padding: 20px;
     background: #1a1a1a;
@@ -80,9 +81,30 @@ button:hover {
     margin-top: 10px;
 }
 
-.movie-details {
+.movie-details-container {
+    display: flex;
+    /* Use flexbox to align image and details */
+    align-items: flex-start;
+    /* Align items at the top */
+    gap: 20px;
+    /* Add space between image and details */
     margin-top: 20px;
+}
+
+.movie-poster {
+    max-width: 250px;
+    /* Fixed width for the poster */
+    height: auto;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    flex-shrink: 0;
+    /* Prevent the image from shrinking */
+}
+
+.movie-details {
     text-align: left;
+    flex-grow: 1;
+    /* Allow details to take up remaining space */
 }
 
 .movie-title {
@@ -91,12 +113,10 @@ button:hover {
     margin-bottom: 10px;
 }
 
-.movie-poster {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #00ffcc;
-    border-radius: 10px;
-    margin-bottom: 10px;
+.movie-details p {
+    margin: 5px 0;
+    line-height: 1.6;
+    /* Improved readability */
 }
 
 .movie-details p strong {
